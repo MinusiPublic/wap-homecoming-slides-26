@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>스타일 2 — 도트 그리드</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+    /* ── 스타일 2: 흰색 도트 그리드 ── */
+    .reveal {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #0d1b2a;
+      background-image: radial-gradient(rgba(255,255,255,0.13) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+      color: #e2e8f0;
+    }
+    .reveal .slides section { padding: 24px 48px; box-sizing: border-box; }
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 { text-transform: none; font-family: 'Noto Sans KR', sans-serif; }
+
+    .title-bar { font-size: 1.5rem; font-weight: 700; color: #60a5fa; border-bottom: 2px solid #2563eb; padding-bottom: 0.3rem; margin-bottom: 1.2rem; text-align: left; }
+    .reveal ul.items { list-style: none; text-align: left; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.9rem; }
+    .reveal ul.items li { font-size: 1.5rem; line-height: 1.7; color: #e2e8f0; padding: 0.8rem 1.2rem 0.8rem 1.4rem; background: rgba(13,27,42,0.85); border-radius: 0 6px 6px 0; border-left: 3px solid #2563eb; }
+
+    .impact { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+    .impact h2 { font-size: 4.2rem; font-weight: 900; color: #fff; text-align: center; line-height: 1.3; margin: 0; border: none !important; }
+
+    .intro-layout { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; height: 100%; padding-top: 0.8rem; }
+    .intro-heading-wrap { display: inline-block; margin-bottom: 2rem; }
+    .intro-heading { font-size: 2.8rem; font-weight: 900; color: #fff; margin: 0 0 1.2rem; letter-spacing: -0.02em; }
+    .intro-divider { width: 100%; border: none; border-top: 3px solid #3b82f6; border-radius: 2px; margin: 0; }
+    .intro-table { display: flex; flex-direction: column; gap: 1.6rem; }
+    .intro-row { display: flex; align-items: baseline; gap: 2.5rem; font-size: 1.5rem; }
+    .intro-key { color: #475569; min-width: 4rem; font-weight: 400; letter-spacing: 0.04em; }
+    .intro-val { color: #f1f5f9; font-weight: 700; }
+    .intro-val .badge { color: #f59e0b; }
+
+    .toc-item { display: flex; align-items: center; gap: 1.2rem; background: rgba(13,27,42,0.85); border-left: 4px solid #2563eb; border-radius: 0 10px 10px 0; padding: 1rem 1.6rem; }
+    .toc-num { font-size: 2.2rem; font-weight: 900; color: #60a5fa; min-width: 2rem; }
+    .toc-label { font-size: 1.5rem; font-weight: 700; color: #fff; }
+
+    .reveal .progress span { background: #2563eb; }
+    .reveal .controls { color: #2563eb; }
+    .reveal .slide-number { background: rgba(37,99,235,0.5); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <section data-background-color="#0d1b2a" data-background-image="radial-gradient(rgba(255,255,255,0.13) 1.5px, transparent 1.5px)" data-background-size="22px 22px">
+      <div style="text-align: center;">
+        <div style="font-size: 0.9rem; color: #60a5fa; letter-spacing: 0.18em; margin-bottom: 1.2rem;">동아리 홈커밍 파티 · 연사 발표</div>
+        <h1 style="font-size: 3.8rem; font-weight: 900; color: #fff; line-height: 1.45; margin: 0;">그대들은<br>어떻게 살 것인가</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="intro-layout">
+        <div class="intro-heading-wrap">
+          <div class="intro-heading">자기소개</div>
+          <hr class="intro-divider">
+        </div>
+        <div class="intro-table">
+          <div class="intro-row"><span class="intro-key">이름</span><span class="intro-val">조정범</span></div>
+          <div class="intro-row"><span class="intro-key">직장</span><span class="intro-val">엔씨</span></div>
+          <div class="intro-row"><span class="intro-key">직군</span><span class="intro-val">클라이언트 프로그래머 <span class="badge">7년차</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div style="text-align: center; padding-top: 0.5rem;">
+        <div style="font-size: 1.3rem; font-weight: 700; color: #60a5fa; letter-spacing: 0.1em; margin-bottom: 1.6rem;">목차</div>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; max-width: 420px; margin: 0 auto;">
+          <div class="toc-item"><span class="toc-num">1</span><span class="toc-label">면접 이야기</span></div>
+          <div class="toc-item"><span class="toc-num">2</span><span class="toc-label">취업 이야기</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="title-bar">신입을 뽑아라</div>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 1.5rem; gap: 0.4rem;">
+        <div style="font-size: 1rem; color: #64748b; letter-spacing: 0.1em;">경쟁률</div>
+        <div style="font-size: 7rem; font-weight: 900; color: #60a5fa; line-height: 1; letter-spacing: -0.03em;">50:1</div>
+      </div>
+    </section>
+
+    <section><div class="title-bar">중고신입</div><ul class="items"><li>스펙 경쟁이 치열</li><li>타업계 사람들도 지원</li></ul></section>
+    <section><div class="title-bar">스펙 빈부격차</div><ul class="items"><li>학벌과 스펙이 비례하는 경향</li></ul></section>
+
+    <section data-background-color="#0d1b2a" data-background-image="radial-gradient(rgba(255,255,255,0.13) 1.5px, transparent 1.5px)" data-background-size="22px 22px" style="background: linear-gradient(135deg, rgba(30,58,95,0.92), rgba(29,78,216,0.92));">
+      <div class="impact"><h2>게임학원 / 부트캠프<br>이력의 보편화</h2></div>
+    </section>
+    <section data-background-color="#132236" data-background-image="radial-gradient(rgba(255,255,255,0.13) 1.5px, transparent 1.5px)" data-background-size="22px 22px">
+      <div class="impact"><h2>컬처핏</h2></div>
+    </section>
+
+    <section><div class="title-bar">내실 다지기</div><ul class="items"><li>대내외 활동 참여</li><li>포트폴리오 제작</li></ul></section>
+
+    <section data-background-gradient="linear-gradient(135deg, #3b0a0a 0%, #7f1d1d 100%)">
+      <div class="impact"><h2 style="color: #fca5a5;">스펙 부풀리기<br>금지</h2></div>
+    </section>
+
+    <section><div class="title-bar">기타 고려사항</div><ul class="items"><li>이력서 정제하기</li><li>면접 긴장 금지</li><li>AI 활용 경험 늘리기</li></ul></section>
+
+    <section data-background-color="#132236" data-background-image="radial-gradient(rgba(255,255,255,0.13) 1.5px, transparent 1.5px)" data-background-size="22px 22px">
+      <div class="impact"><h2>기술 스택에<br>충실하기</h2></div>
+    </section>
+
+    <section data-background-color="#0d1b2a" data-background-image="radial-gradient(rgba(255,255,255,0.13) 1.5px, transparent 1.5px)" data-background-size="22px 22px">
+      <div class="impact">
+        <div style="font-size: 5.5rem; font-weight: 900; color: #60a5fa; line-height: 1;">Q&amp;A</div>
+        <div style="font-size: 1.2rem; color: #94a3b8; margin-top: 0.8rem;">궁금한 것 뭐든지!</div>
+      </div>
+    </section>
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({ hash: true, controls: true, progress: true, slideNumber: 'c/t', center: true, transition: 'slide', backgroundTransition: 'fade', width: 960, height: 700, margin: 0.04 });
+</script>
+</body>
+</html>

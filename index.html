@@ -3,81 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>게임 클라이언트 프로그래머 7년차 선배의 취업 &amp; 업계 이야기</title>
+  <title>그대들은 어떻게 살 것인가</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
 
-  <script>
-  // ================================================================
-  //  ✏️  수정은 여기서만 하세요. 아래쪽 HTML은 건드리지 않아도 됩니다.
-  // ================================================================
-  const CONTENT = {
-
-    // ── 1. 자기소개 ────────────────────────────────────────────
-    school:  "출신 학교 / 전공",           // 예: "한국대학교 컴퓨터공학과"
-    company: "현재 회사 및 직무",          // 예: "넥슨코리아 · 게임 클라이언트 개발"
-    impact:  "7년을 한 줄로",             // 예: "모바일 RPG 3편 출시, 누적 1천만 다운로드"
-
-    // ── 2-1. 취업 시장 ─────────────────────────────────────────
-    data1_title: "데이터 포인트 #1",
-    data1_desc:  "수치 / 기사 인용 내용을 여기에",
-    data2_title: "데이터 포인트 #2",
-    data2_desc:  "수치 / 기사 인용 내용을 여기에",
-    pivot_msg:   "이런 상황이니까, 더 잘 준비해야 한다",
-
-    // ── 2-2. 면접관이 기억하는 패턴 ────────────────────────────
-    // 항목을 추가하고 싶으면 줄을 복사해서 붙여넣으면 됩니다
-    good_cases: [
-      "좋았던 케이스 #1",
-      "좋았던 케이스 #2",
-    ],
-    bad_cases: [
-      "아쉬웠던 케이스 #1",
-      "아쉬웠던 케이스 #2",
-    ],
-    common_mistake: "지원자들이 공통적으로 많이 하던 실수",
-
-    // ── 3-1. 신입에게 기대 vs 오해 ─────────────────────────────
-    expectations: [
-      "신입에게 실제로 기대하는 것 #1",
-      "신입에게 실제로 기대하는 것 #2",
-    ],
-    misconceptions: [
-      "흔히 오해하는 것 #1",
-      "흔히 오해하는 것 #2",
-    ],
-
-    // ── 3-2. 현장 이야기 ────────────────────────────────────────
-    fun_parts: [
-      "재미있는 점 #1",
-      "재미있는 점 #2",
-    ],
-    hard_parts: [
-      "힘든 점 #1",
-      "힘든 점 #2",
-    ],
-
-    // ── 4. 마무리 ───────────────────────────────────────────────
-    key_message: "핵심 메시지를 여기에 1~2줄로",
-    last_word:   "후배들에게 남기고 싶은 한 마디",
-    contact:     "개인 연락처 또는 채널 (선택 공개)",
-  };
-  // ================================================================
-  //  ✏️  수정 끝. 여기 아래는 건드리지 않아도 됩니다.
-  // ================================================================
-  </script>
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
+    /* ── 전역 배경 ── */
     .reveal {
       font-family: 'Noto Sans KR', sans-serif;
-      background: #0f1923;
-      color: #e2e8f0;
+      background-color: #eef2ff;
+      background-image: radial-gradient(rgba(37, 99, 235, 0.13) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+      color: #1e293b;
     }
     .reveal .slides section {
-      padding: 24px 48px;
+      padding: 32px 52px;
       box-sizing: border-box;
     }
     .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
@@ -85,325 +28,163 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    .sec-div {
+    /* ── 통일 템플릿 (슬라이드 4–12) ── */
+    .slide-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: left;
+    }
+    .slide-title-wrap {
+      display: block;
+      margin-bottom: 1.8rem;
+    }
+    .slide-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin: 0 0 0.6rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .slide-title.warn { color: #dc2626; }
+    .slide-rule {
+      border: none;
+      border-top: 3px solid #3b82f6;
+      width: 50%;
+      margin: 0;
+      border-radius: 2px;
+    }
+    .slide-rule.warn { border-top-color: #dc2626; }
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* ── 불릿 리스트 ── */
+    .reveal ul.items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .reveal ul.items li {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.65;
+      color: #1e293b;
+      padding-left: 1.6rem;
+      position: relative;
+    }
+    .reveal ul.items li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: 700;
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+
+    /* ── 빅넘버 (50:1) ── */
+    .big-number-wrap {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100%;
+      gap: 0.3rem;
     }
-    .sec-div .big-num {
+    .big-number-label {
+      font-size: 1rem;
+      color: #94a3b8;
+      letter-spacing: 0.12em;
+      font-weight: 400;
+    }
+    .big-number {
       font-size: 7rem;
       font-weight: 900;
+      color: #1d4ed8;
       line-height: 1;
-      opacity: 0.15;
-      color: #fff;
-      letter-spacing: -0.04em;
-    }
-    .sec-div h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #fff;
-      margin: -0.6rem 0 0;
-      border: none !important;
-    }
-    .sec-div .sec-time {
-      font-size: 0.85rem;
-      color: #93c5fd;
-      margin-top: 0.5rem;
-    }
-    .sec-div .bridge {
-      margin-top: 1.2rem;
-      background: rgba(255, 193, 7, 0.15);
-      border: 1px solid rgba(255, 193, 7, 0.4);
-      border-radius: 6px;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.75rem;
-      color: #fde68a;
-      font-style: italic;
+      letter-spacing: -0.03em;
     }
 
-    .slide-title-bar {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #60a5fa;
-      border-bottom: 2px solid #2563eb;
-      padding-bottom: 0.3rem;
-      margin-bottom: 0.9rem;
-      text-align: left;
-    }
-
-    .agenda-list {
+    /* ── 자기소개 ── */
+    .intro-layout {
       display: flex;
       flex-direction: column;
-      gap: 0.55rem;
-      max-width: 580px;
-      margin: 0 auto;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+      padding-top: 0.8rem;
     }
-    .agenda-item {
+    .intro-columns {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+    }
+    .intro-logo-wrap {
+      flex: 1;
       display: flex;
       align-items: center;
-      gap: 0.9rem;
-      padding: 0.55rem 1rem;
+      justify-content: center;
+    }
+    .intro-logo-wrap img {
+      max-width: 100%;
+      max-height: 8rem;
+      width: auto;
+      height: auto;
       border-radius: 8px;
-      background: rgba(37, 99, 235, 0.12);
-      border-left: 4px solid #2563eb;
     }
-    .agenda-item.core {
-      background: rgba(37, 99, 235, 0.22);
-      border-left-color: #60a5fa;
-    }
-    .agenda-num {
-      font-size: 1.3rem;
+    .intro-heading-wrap { display: inline-block; margin-bottom: 2rem; }
+    .intro-heading {
+      font-size: 2.8rem;
       font-weight: 900;
-      color: #60a5fa;
-      min-width: 1.6rem;
+      color: #0f172a;
+      margin: 0 0 1.2rem;
+      letter-spacing: -0.02em;
     }
-    .agenda-label {
-      flex: 1;
-      font-size: 0.82rem;
-    }
-    .agenda-time {
-      font-size: 0.7rem;
-      color: #94a3b8;
-      white-space: nowrap;
-    }
-    .core-badge {
-      background: #f59e0b;
-      color: #1c1917;
-      font-size: 0.6rem;
-      font-weight: 700;
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
-      margin-left: 0.4rem;
-    }
-
-    .reveal ul.slide-ul {
-      list-style: none;
-      text-align: left;
-      margin: 0;
-      padding: 0;
-    }
-    .reveal ul.slide-ul li {
-      font-size: 0.75rem;
-      line-height: 1.9;
-      color: #e2e8f0;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-    .reveal ul.slide-ul li::before {
-      content: "▸";
-      color: #3b82f6;
-      position: absolute;
-      left: 0;
-    }
-    .reveal ul.slide-ul li.note-li {
-      font-size: 0.62rem;
-      color: #94a3b8;
-      font-style: italic;
-      padding-left: 1.6rem;
-    }
-    .reveal ul.slide-ul li.note-li::before {
-      content: "◦";
-      color: #64748b;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-    }
-    .col-box {
-      background: rgba(37, 99, 235, 0.1);
-      border-radius: 8px;
-      padding: 0.8rem 1rem;
-      border-top: 3px solid #2563eb;
-      text-align: left;
-    }
-    .col-box.green { border-top-color: #22c55e; }
-    .col-box.red   { border-top-color: #ef4444; }
-    .col-box h4 {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #60a5fa;
-      margin: 0 0 0.45rem;
-    }
-    .col-box.green h4 { color: #86efac; }
-    .col-box.red h4   { color: #fca5a5; }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
-    }
-    .card {
-      background: rgba(37, 99, 235, 0.1);
-      border-radius: 8px;
-      padding: 0.7rem 0.9rem;
-      border-left: 4px solid #2563eb;
-      text-align: left;
-    }
-    .card h4 {
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: #60a5fa;
-      margin: 0 0 0.35rem;
-    }
-    .card p {
-      font-size: 0.62rem;
-      color: #cbd5e1;
-      line-height: 1.6;
+    .intro-divider {
+      width: 100%;
+      border: none;
+      border-top: 3px solid #3b82f6;
+      border-radius: 2px;
       margin: 0;
     }
+    .intro-table { display: flex; flex-direction: column; gap: 1.6rem; }
+    .intro-row { display: flex; align-items: baseline; gap: 2.5rem; font-size: 1.5rem; }
+    .intro-key { color: #94a3b8; min-width: 4rem; font-weight: 400; letter-spacing: 0.04em; }
+    .intro-val { color: #0f172a; font-weight: 700; }
+    .intro-val .badge { color: #b45309; }
 
-    .callout {
-      background: rgba(255, 193, 7, 0.08);
-      border-left: 4px solid #f59e0b;
-      border-radius: 0 6px 6px 0;
-      padding: 0.5rem 0.9rem;
-      font-size: 0.66rem;
-      color: #fde68a;
-      font-style: italic;
-      text-align: left;
-      margin-top: 0.7rem;
-    }
-
-    .pivot {
-      text-align: center;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #60a5fa;
-      margin-top: 0.8rem;
-    }
-
-    .key-msg {
-      background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(31,78,121,0.3));
-      border: 1px solid rgba(96, 165, 250, 0.3);
-      border-radius: 10px;
-      padding: 1rem 1.4rem;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #fff;
-      font-style: italic;
-      text-align: center;
-      margin-bottom: 0.8rem;
-    }
-
-    .qa-row {
+    /* ── 목차 ── */
+    .toc-item {
       display: flex;
-      gap: 1rem;
-      margin-top: 0.8rem;
-      align-items: stretch;
+      align-items: center;
+      gap: 1.2rem;
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 10px 10px 0;
+      padding: 1rem 1.6rem;
+      box-shadow: 0 1px 4px rgba(37, 99, 235, 0.08);
     }
-    .qa-box {
-      flex: 1;
-      text-align: center;
-      background: rgba(37, 99, 235, 0.12);
-      border-radius: 10px;
-      padding: 1rem;
-      border: 1px solid rgba(96, 165, 250, 0.2);
-    }
-    .qa-box .big {
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: #60a5fa;
-      line-height: 1;
-    }
-    .qa-box .small {
-      font-size: 0.6rem;
-      color: #94a3b8;
-      margin-top: 0.3rem;
-    }
+    .toc-num { font-size: 2.2rem; font-weight: 900; color: #2563eb; min-width: 2rem; }
+    .toc-label { font-size: 1.5rem; font-weight: 700; color: #1e293b; }
 
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      text-align: left;
-    }
-    .tl-item {
-      display: flex;
-      gap: 0.8rem;
-      align-items: flex-start;
-    }
-    .tl-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #2563eb;
-      margin-top: 0.35rem;
-      flex-shrink: 0;
-    }
-    .tl-dot.gold { background: #f59e0b; }
-    .tl-body { font-size: 0.73rem; line-height: 1.7; }
-    .tl-label { font-weight: 700; color: #60a5fa; }
-    .tl-label.gold { color: #fbbf24; }
-
+    /* ── 진행 바 / 컨트롤 ── */
     .reveal .progress span { background: #2563eb; }
     .reveal .controls { color: #2563eb; }
     .reveal .slide-number {
-      background: rgba(37, 99, 235, 0.5);
-      color: #fff;
+      background: rgba(37, 99, 235, 0.15);
+      color: #1d4ed8;
       font-size: 0.65rem;
       padding: 2px 7px;
       border-radius: 4px;
-    }
-
-    .data-card {
-      background: rgba(37, 99, 235, 0.1);
-      border-radius: 8px;
-      padding: 0.7rem 1rem;
-      border-left: 4px solid #2563eb;
-      text-align: left;
-      margin-bottom: 0.6rem;
-    }
-    .data-card h4 {
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: #60a5fa;
-      margin: 0 0 0.3rem;
-    }
-    .data-card p {
-      font-size: 0.62rem;
-      color: #94a3b8;
-      margin: 0;
-    }
-
-    .warn-box {
-      background: rgba(239, 68, 68, 0.08);
-      border-left: 4px solid #ef4444;
-      border-radius: 0 6px 6px 0;
-      padding: 0.5rem 0.9rem;
-      font-size: 0.62rem;
-      color: #fca5a5;
-      text-align: left;
-      margin-top: 0.6rem;
-    }
-
-    .order-badge {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.3);
-      color: #93c5fd;
-      font-size: 0.62rem;
-      font-weight: 700;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      margin-bottom: 0.5rem;
-    }
-
-    .mistake-box {
-      background: rgba(37, 99, 235, 0.08);
-      border-radius: 8px;
-      padding: 0.6rem 0.9rem;
-      border-left: 4px solid #60a5fa;
-      text-align: left;
-      margin-top: 0.6rem;
-    }
-    .mistake-box .label {
-      font-size: 0.62rem;
-      font-weight: 700;
-      color: #60a5fa;
-      margin-bottom: 0.3rem;
     }
   </style>
 </head>
@@ -412,274 +193,208 @@
   <div class="slides">
 
     <!-- Slide 1: 타이틀 -->
-    <section data-background-gradient="linear-gradient(135deg, #0c1a2e 0%, #1e3a5f 100%)">
-      <div style="padding: 1.5rem 0; text-align: center;">
-        <div style="font-size: 0.6rem; color: #60a5fa; letter-spacing: 0.18em; margin-bottom: 0.8rem;">
-          🎮 &nbsp;동아리 홈커밍 파티 연사 발표
+    <section data-background-image="resources/index_image.png" data-background-opacity="0.75" data-background-size="cover" data-background-position="center">
+      <div style="text-align: center;">
+        <div style="font-size: 0.9rem; color: #2563eb; letter-spacing: 0.18em; margin-bottom: 1.2rem;">
+          동아리 홈커밍 파티 · 연사 발표
         </div>
-        <h1 style="font-size: 1.8rem; font-weight: 900; color: #fff; line-height: 1.45; margin: 0;">
-          게임 클라이언트 프로그래머<br>
-          <span style="color: #60a5fa;">7년차</span> 선배의<br>
-          취업 &amp; 업계 이야기
+        <h1 style="font-size: 3.8rem; font-weight: 900; color: #0f172a; line-height: 1.45; margin: 0;">
+          그대들은<br>어떻게 살 것인가
         </h1>
-        <div style="margin-top: 1.4rem; font-size: 0.6rem; color: #64748b; line-height: 1.8;">
-          발표 시간: 최대 15분 &nbsp;|&nbsp; 대상: 프로그래밍 동아리 후배들 (비게임 전공자 포함)
-        </div>
       </div>
     </section>
 
-    <!-- Slide 2: 목차 -->
+    <!-- Slide 2: 자기소개 -->
     <section>
-      <div class="slide-title-bar">오늘의 목차</div>
-      <div class="agenda-list">
-        <div class="agenda-item">
-          <span class="agenda-num">1</span>
-          <span class="agenda-label">자기소개</span>
-          <span class="agenda-time">약 2분</span>
+      <div class="intro-layout">
+        <div class="intro-heading-wrap">
+          <div class="intro-heading">자기소개</div>
+          <hr class="intro-divider">
         </div>
-        <div class="agenda-item core">
-          <span class="agenda-num">2</span>
-          <span class="agenda-label">취업 이야기 <span class="core-badge">★ 핵심</span></span>
-          <span class="agenda-time">약 8~9분</span>
-        </div>
-        <div class="agenda-item">
-          <span class="agenda-num">3</span>
-          <span class="agenda-label">게임 업계 이야기</span>
-          <span class="agenda-time">약 2~3분</span>
-        </div>
-        <div class="agenda-item">
-          <span class="agenda-num">4</span>
-          <span class="agenda-label">마무리 &amp; Q&amp;A</span>
-          <span class="agenda-time">약 1~2분</span>
-        </div>
-      </div>
-      <div style="text-align: center; font-size: 0.6rem; color: #475569; margin-top: 1rem;">총 발표 시간: 최대 15분</div>
-    </section>
-
-    <!-- Section 1 divider -->
-    <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
-      <div class="sec-div">
-        <div class="big-num">01</div>
-        <h2>자기소개</h2>
-        <div class="sec-time">약 2분</div>
-      </div>
-    </section>
-
-    <!-- Slide 4: 자기소개 내용 -->
-    <section>
-      <div class="slide-title-bar">👤 자기소개</div>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <span class="tl-label">학력</span><br>
-            <span id="c-school"></span>
+        <div class="intro-columns">
+          <div class="intro-table">
+            <div class="intro-row">
+              <span class="intro-key">이름</span>
+              <span class="intro-val">조정범</span>
+            </div>
+            <div class="intro-row">
+              <span class="intro-key">직장</span>
+              <span class="intro-val">엔씨</span>
+            </div>
+            <div class="intro-row">
+              <span class="intro-key">직군</span>
+              <span class="intro-val">클라이언트 프로그래머 <span class="badge">7년차</span></span>
+            </div>
           </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <span class="tl-label">현재</span><br>
-            <span id="c-company"></span>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot gold"></div>
-          <div class="tl-body">
-            <span class="tl-label gold">한 줄 임팩트</span><br>
-            <span id="c-impact"></span>
+          <div class="intro-logo-wrap">
+            <img src="resources/nc_logo.jpg" alt="NC" style="border-radius: 8px;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 5: 주제 예고 -->
+    <!-- Slide 3: 목차 -->
     <section>
-      <div class="slide-title-bar">📌 오늘 다룰 두 가지</div>
-      <div class="two-col">
-        <div class="col-box">
-          <h4>💼 취업 이야기</h4>
-          <ul class="slide-ul">
-            <li>취업 시장 현황</li>
-            <li>면접 경험 (양쪽 관점)</li>
-            <li>실전 팁</li>
-          </ul>
+      <div style="text-align: center; padding-top: 0.5rem;">
+        <div style="font-size: 2.8rem; font-weight: 900; color: #1d4ed8; letter-spacing: -0.02em; margin-bottom: 1.6rem;">목차</div>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; max-width: 420px; margin: 0 auto;">
+          <div class="toc-item"><span class="toc-num">1</span><span class="toc-label">면접 이야기(Keywords)</span></div>
+          <div class="toc-item"><span class="toc-num">2</span><span class="toc-label">취업 이야기(Tips)</span></div>
         </div>
-        <div class="col-box">
-          <h4>🎮 게임 업계 이야기</h4>
-          <ul class="slide-ul">
-            <li>업계 취업 동향</li>
-            <li>현장 이야기</li>
-          </ul>
-        </div>
-      </div>
-      <div class="callout">"게임 안 하는 분도 앞 파트는 전부 해당되는 내용입니다 :)"</div>
-    </section>
-
-    <!-- Section 2 divider -->
-    <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
-      <div class="sec-div">
-        <div class="big-num">02</div>
-        <h2>취업 이야기</h2>
-        <div class="sec-time">약 8~9분 &nbsp;·&nbsp; ★ 핵심 파트</div>
       </div>
     </section>
 
-    <!-- Slide 7: 2-1 취업 시장 -->
+    <!-- Slide 4: 신입을 뽑아라 -->
     <section>
-      <div class="slide-title-bar">2-1. 지금 취업 시장은?</div>
-      <div class="data-card">
-        <h4 id="c-data1-title"></h4>
-        <p id="c-data1-desc"></p>
-      </div>
-      <div class="data-card">
-        <h4 id="c-data2-title"></h4>
-        <p id="c-data2-desc"></p>
-      </div>
-      <div class="callout">팩트만 짧게 치고 빠지기 — 너무 길면 분위기가 가라앉음</div>
-      <div class="pivot">→ "<span id="c-pivot"></span>"</div>
-    </section>
-
-    <!-- Slide 8: 2-2 면접 (양쪽 관점) -->
-    <section>
-      <div class="slide-title-bar">2-2. 면접, 양쪽에서 보다</div>
-      <div class="order-badge">추천 순서: 전문가 포지션으로 시작 → 공감으로 연결</div>
-      <div class="two-col">
-        <div class="col-box">
-          <h4>① 면접관으로 들어갔을 때</h4>
-          <ul class="slide-ul">
-            <li>어떤 것을 중점적으로 봤는가</li>
-            <li>기억에 남는 지원자 패턴</li>
-            <li>자주 보이는 공통 실수</li>
-          </ul>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">신입을 뽑아라</h2>
+          <hr class="slide-rule">
         </div>
-        <div class="col-box">
-          <h4>② 내가 취준생이었을 때</h4>
-          <ul class="slide-ul">
-            <li>긴장되었던 순간들</li>
-            <li>잘 됐던 / 실패했던 경험</li>
-            <li>그때 알았으면 좋았을 것</li>
+        <div class="slide-body">
+          <ul class="items">
+            <li>경쟁률 50:1</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Slide 9: 면접관 패턴 -->
+    <!-- Slide 5: 중고신입 -->
     <section>
-      <div class="slide-title-bar">면접관이 기억하는 지원자 패턴</div>
-      <div class="two-col">
-        <div class="col-box green">
-          <h4>✅ 좋았던 케이스</h4>
-          <ul class="slide-ul" id="c-good-cases"></ul>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">K1. 중고신입</h2>
+          <hr class="slide-rule">
         </div>
-        <div class="col-box red">
-          <h4>❌ 아쉬웠던 케이스</h4>
-          <ul class="slide-ul" id="c-bad-cases"></ul>
-        </div>
-      </div>
-      <div class="mistake-box">
-        <div class="label">⚠️ 공통 실수</div>
-        <ul class="slide-ul">
-          <li id="c-mistake"></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Slide 10: 2-3 실전 팁 -->
-    <section>
-      <div class="slide-title-bar">2-3. 취업 준비 &amp; 면접 실전 팁</div>
-      <div class="card-grid">
-        <div class="card">
-          <h4>📄 포트폴리오 / 이력서</h4>
-          <p>실제로 눈에 들어오는 것 vs 안 들어오는 것</p>
-        </div>
-        <div class="card">
-          <h4>💬 면접 질문 유형</h4>
-          <p>자주 나오는 질문 유형 &amp; 좋은 답변 구조</p>
-        </div>
-        <div class="card">
-          <h4>💻 기술 면접</h4>
-          <p>준비 시 흔히 놓치는 것들</p>
-        </div>
-        <div class="card">
-          <h4>🤝 태도 &amp; 커뮤니케이션</h4>
-          <p>합격에 미치는 영향 (면접관 관점)</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3 divider -->
-    <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
-      <div class="sec-div">
-        <div class="big-num">03</div>
-        <h2>게임 업계 이야기</h2>
-        <div class="sec-time">약 2~3분</div>
-        <div class="bridge">"여기서부터는 게임 업계에 관심 있는 분들을 위한 파트입니다"</div>
-      </div>
-    </section>
-
-    <!-- Slide 12: 3-1 게임 업계 동향 -->
-    <section>
-      <div class="slide-title-bar">3-1. 게임 업계 취업 동향</div>
-      <ul class="slide-ul" style="margin-top: 0.3rem;">
-        <li>게임 클라이언트 직군에서 요즘 보는 스킬셋
-          <ul class="slide-ul">
-            <li class="note-li">Unity / Unreal Engine — 엔진 선호도 &amp; 요구 수준</li>
+        <div class="slide-body">
+          <ul class="items">
+            <li>스펙 경쟁이 치열</li>
+            <li>타업계 사람들도 지원</li>
           </ul>
-        </li>
-        <li>신입에게 실제로 기대하는 것 vs 오해하는 것</li>
-      </ul>
-      <div class="two-col" style="margin-top: 0.7rem;">
-        <div class="col-box green">
-          <h4>실제 기대하는 것</h4>
-          <ul class="slide-ul" id="c-expectations"></ul>
-        </div>
-        <div class="col-box red">
-          <h4>흔히 오해하는 것</h4>
-          <ul class="slide-ul" id="c-misconceptions"></ul>
         </div>
       </div>
     </section>
 
-    <!-- Slide 13: 3-2 현장 이야기 -->
+    <!-- Slide 6: 스펙 빈부격차 -->
     <section>
-      <div class="slide-title-bar">3-2. 현장 이야기</div>
-      <div class="two-col">
-        <div class="col-box green">
-          <h4>😄 재미있는 점</h4>
-          <ul class="slide-ul" id="c-fun-parts"></ul>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">K2.스펙 빈부격차</h2>
+          <hr class="slide-rule">
         </div>
-        <div class="col-box red">
-          <h4>😓 힘든 점</h4>
-          <ul class="slide-ul" id="c-hard-parts"></ul>
+        <div class="slide-body">
+          <ul class="items">
+            <li>학벌과 스펙이 비례하는 경향</li>
+          </ul>
         </div>
-      </div>
-      <div class="warn-box">공개된 정보 범위 내에서만 — 특정 회사 내부 비화는 주의</div>
-    </section>
-
-    <!-- Section 4 divider -->
-    <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
-      <div class="sec-div">
-        <div class="big-num">04</div>
-        <h2>마무리</h2>
-        <div class="sec-time">약 1~2분</div>
       </div>
     </section>
 
-    <!-- Slide 15: 마무리 & Q&A -->
+    <!-- Slide 7: 게임학원/부트캠프 이력의 보편화 -->
     <section>
-      <div class="slide-title-bar">🏁 마무리</div>
-      <div class="key-msg" id="c-key-message"></div>
-      <div style="font-size: 0.72rem; color: #cbd5e1; text-align: left; margin-bottom: 0.8rem;" id="c-last-word"></div>
-      <div class="qa-row">
-        <div class="qa-box">
-          <div class="big">Q&amp;A</div>
-          <div class="small">궁금한 것 뭐든지!</div>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">K3. 스펙 과열</h2>
+          <hr class="slide-rule">
         </div>
-        <div class="qa-box" style="text-align: left; padding: 0.8rem 1rem;">
-          <div style="font-size: 0.65rem; font-weight: 700; color: #60a5fa; margin-bottom: 0.4rem;">📬 연락처</div>
-          <div style="font-size: 0.62rem; color: #94a3b8; line-height: 1.7;" id="c-contact"></div>
+        <div class="slide-body">
+          <ul class="items">
+            <li>게임학원, 부트캠프의 보편화</li>
+          </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: 컬처핏 -->
+    <section>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">K4. 컬처핏</h2>
+          <hr class="slide-rule">
+        </div>
+        <div class="slide-body">
+          <ul class="items">
+            <li>최종 합격의 마지막 열쇠</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: 내실 다지기 -->
+    <section>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">T1. 내실 다지기</h2>
+          <hr class="slide-rule">
+        </div>
+        <div class="slide-body">
+          <ul class="items">
+            <li>대내외 활동 참여</li>
+            <li>포트폴리오 제작</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: 스펙 부풀리기 금지 -->
+    <section>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">T2. 거짓말 금지</h2>
+          <hr class="slide-rule">
+        </div>
+        <div class="slide-body">
+          <ul class="items">
+            <li>스펙 부풀리기 금지</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11: 기술 스택에 충실하기 -->
+    <section>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">T3. 기초에 충실하기</h2>
+          <hr class="slide-rule">
+        </div>
+        <div class="slide-body">
+          <ul class="items">
+            <li>면접 질문은 정해져있다</li>
+            <li>본인 기술 스택에 대한 이해가 우선</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 12: 기타 고려사항 -->
+    <section>
+      <div class="slide-layout">
+        <div class="slide-title-wrap">
+          <h2 class="slide-title">기타 고려사항</h2>
+          <hr class="slide-rule">
+        </div>
+        <div class="slide-body">
+          <ul class="items">
+            <li>이력서 정제하기</li>
+            <li>면접 긴장 금지</li>
+            <li>AI 활용 경험 늘리기</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 13: Q&A -->
+    <section>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+        <div style="font-size: 5.5rem; font-weight: 900; color: #0f172a; line-height: 1;">Q &amp; A</div>
+      </div>
+    </section>
+
+    <!-- Slide 14: End -->
+    <section>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+        <div style="font-size: 5.5rem; font-weight: 900; color: #0f172a; line-height: 1;">감사합니다</div>
       </div>
     </section>
 
@@ -688,36 +403,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
 <script>
-  // CONTENT 값을 슬라이드에 채워 넣는 코드 (수정 불필요)
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
-  }
-  function setList(id, items) {
-    const ul = document.getElementById(id);
-    if (!ul) return;
-    ul.innerHTML = items.map(item => `<li>${item}</li>`).join('');
-  }
-
-  setText('c-school',       CONTENT.school);
-  setText('c-company',      CONTENT.company);
-  setText('c-impact',       CONTENT.impact);
-  setText('c-data1-title',  CONTENT.data1_title);
-  setText('c-data1-desc',   CONTENT.data1_desc);
-  setText('c-data2-title',  CONTENT.data2_title);
-  setText('c-data2-desc',   CONTENT.data2_desc);
-  setText('c-pivot',        CONTENT.pivot_msg);
-  setList('c-good-cases',   CONTENT.good_cases);
-  setList('c-bad-cases',    CONTENT.bad_cases);
-  setText('c-mistake',      CONTENT.common_mistake);
-  setList('c-expectations', CONTENT.expectations);
-  setList('c-misconceptions', CONTENT.misconceptions);
-  setList('c-fun-parts',    CONTENT.fun_parts);
-  setList('c-hard-parts',   CONTENT.hard_parts);
-  setText('c-key-message',  CONTENT.key_message);
-  setText('c-last-word',    CONTENT.last_word);
-  setText('c-contact',      CONTENT.contact);
-
   Reveal.initialize({
     hash: true,
     controls: true,
