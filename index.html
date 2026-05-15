@@ -8,10 +8,69 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
 
+  <script>
+  // ================================================================
+  //  ✏️  수정은 여기서만 하세요. 아래쪽 HTML은 건드리지 않아도 됩니다.
+  // ================================================================
+  const CONTENT = {
+
+    // ── 1. 자기소개 ────────────────────────────────────────────
+    school:  "출신 학교 / 전공",           // 예: "한국대학교 컴퓨터공학과"
+    company: "현재 회사 및 직무",          // 예: "넥슨코리아 · 게임 클라이언트 개발"
+    impact:  "7년을 한 줄로",             // 예: "모바일 RPG 3편 출시, 누적 1천만 다운로드"
+
+    // ── 2-1. 취업 시장 ─────────────────────────────────────────
+    data1_title: "데이터 포인트 #1",
+    data1_desc:  "수치 / 기사 인용 내용을 여기에",
+    data2_title: "데이터 포인트 #2",
+    data2_desc:  "수치 / 기사 인용 내용을 여기에",
+    pivot_msg:   "이런 상황이니까, 더 잘 준비해야 한다",
+
+    // ── 2-2. 면접관이 기억하는 패턴 ────────────────────────────
+    // 항목을 추가하고 싶으면 줄을 복사해서 붙여넣으면 됩니다
+    good_cases: [
+      "좋았던 케이스 #1",
+      "좋았던 케이스 #2",
+    ],
+    bad_cases: [
+      "아쉬웠던 케이스 #1",
+      "아쉬웠던 케이스 #2",
+    ],
+    common_mistake: "지원자들이 공통적으로 많이 하던 실수",
+
+    // ── 3-1. 신입에게 기대 vs 오해 ─────────────────────────────
+    expectations: [
+      "신입에게 실제로 기대하는 것 #1",
+      "신입에게 실제로 기대하는 것 #2",
+    ],
+    misconceptions: [
+      "흔히 오해하는 것 #1",
+      "흔히 오해하는 것 #2",
+    ],
+
+    // ── 3-2. 현장 이야기 ────────────────────────────────────────
+    fun_parts: [
+      "재미있는 점 #1",
+      "재미있는 점 #2",
+    ],
+    hard_parts: [
+      "힘든 점 #1",
+      "힘든 점 #2",
+    ],
+
+    // ── 4. 마무리 ───────────────────────────────────────────────
+    key_message: "핵심 메시지를 여기에 1~2줄로",
+    last_word:   "후배들에게 남기고 싶은 한 마디",
+    contact:     "개인 연락처 또는 채널 (선택 공개)",
+  };
+  // ================================================================
+  //  ✏️  수정 끝. 여기 아래는 건드리지 않아도 됩니다.
+  // ================================================================
+  </script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
-    /* ── Base ── */
     .reveal {
       font-family: 'Noto Sans KR', sans-serif;
       background: #0f1923;
@@ -26,7 +85,6 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    /* ── Section divider slides ── */
     .sec-div {
       display: flex;
       flex-direction: column;
@@ -65,8 +123,7 @@
       font-style: italic;
     }
 
-    /* ── Content slide heading ── */
-    .reveal .slide-title-bar {
+    .slide-title-bar {
       font-size: 1.15rem;
       font-weight: 700;
       color: #60a5fa;
@@ -76,7 +133,6 @@
       text-align: left;
     }
 
-    /* ── Agenda ── */
     .agenda-list {
       display: flex;
       flex-direction: column;
@@ -122,7 +178,6 @@
       margin-left: 0.4rem;
     }
 
-    /* ── Bullet list ── */
     .reveal ul.slide-ul {
       list-style: none;
       text-align: left;
@@ -153,7 +208,6 @@
       color: #64748b;
     }
 
-    /* ── Two column ── */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -177,7 +231,6 @@
     .col-box.green h4 { color: #86efac; }
     .col-box.red h4   { color: #fca5a5; }
 
-    /* ── Card grid ── */
     .card-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -203,7 +256,6 @@
       margin: 0;
     }
 
-    /* ── Note / callout ── */
     .callout {
       background: rgba(255, 193, 7, 0.08);
       border-left: 4px solid #f59e0b;
@@ -216,7 +268,6 @@
       margin-top: 0.7rem;
     }
 
-    /* ── Pivot message ── */
     .pivot {
       text-align: center;
       font-size: 0.82rem;
@@ -225,7 +276,6 @@
       margin-top: 0.8rem;
     }
 
-    /* ── Key message box ── */
     .key-msg {
       background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(31,78,121,0.3));
       border: 1px solid rgba(96, 165, 250, 0.3);
@@ -239,7 +289,6 @@
       margin-bottom: 0.8rem;
     }
 
-    /* ── QA row ── */
     .qa-row {
       display: flex;
       gap: 1rem;
@@ -266,7 +315,6 @@
       margin-top: 0.3rem;
     }
 
-    /* ── Timeline ── */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -291,7 +339,6 @@
     .tl-label { font-weight: 700; color: #60a5fa; }
     .tl-label.gold { color: #fbbf24; }
 
-    /* ── Reveal overrides ── */
     .reveal .progress span { background: #2563eb; }
     .reveal .controls { color: #2563eb; }
     .reveal .slide-number {
@@ -302,7 +349,6 @@
       border-radius: 4px;
     }
 
-    /* ── Data point card ── */
     .data-card {
       background: rgba(37, 99, 235, 0.1);
       border-radius: 8px;
@@ -323,7 +369,6 @@
       margin: 0;
     }
 
-    /* ── Warning box ── */
     .warn-box {
       background: rgba(239, 68, 68, 0.08);
       border-left: 4px solid #ef4444;
@@ -335,7 +380,6 @@
       margin-top: 0.6rem;
     }
 
-    /* ── Order badge ── */
     .order-badge {
       display: inline-block;
       background: rgba(37, 99, 235, 0.3);
@@ -347,7 +391,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* ── Common mistake box ── */
     .mistake-box {
       background: rgba(37, 99, 235, 0.08);
       border-radius: 8px;
@@ -368,9 +411,7 @@
 <div class="reveal">
   <div class="slides">
 
-    <!-- ───────────────────────────────────────────
-         Slide 1: Title
-    ─────────────────────────────────────────── -->
+    <!-- Slide 1: 타이틀 -->
     <section data-background-gradient="linear-gradient(135deg, #0c1a2e 0%, #1e3a5f 100%)">
       <div style="padding: 1.5rem 0; text-align: center;">
         <div style="font-size: 0.6rem; color: #60a5fa; letter-spacing: 0.18em; margin-bottom: 0.8rem;">
@@ -387,9 +428,7 @@
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 2: 목차
-    ─────────────────────────────────────────── -->
+    <!-- Slide 2: 목차 -->
     <section>
       <div class="slide-title-bar">오늘의 목차</div>
       <div class="agenda-list">
@@ -400,10 +439,7 @@
         </div>
         <div class="agenda-item core">
           <span class="agenda-num">2</span>
-          <span class="agenda-label">
-            취업 이야기
-            <span class="core-badge">★ 핵심</span>
-          </span>
+          <span class="agenda-label">취업 이야기 <span class="core-badge">★ 핵심</span></span>
           <span class="agenda-time">약 8~9분</span>
         </div>
         <div class="agenda-item">
@@ -417,14 +453,10 @@
           <span class="agenda-time">약 1~2분</span>
         </div>
       </div>
-      <div style="text-align: center; font-size: 0.6rem; color: #475569; margin-top: 1rem;">
-        총 발표 시간: 최대 15분
-      </div>
+      <div style="text-align: center; font-size: 0.6rem; color: #475569; margin-top: 1rem;">총 발표 시간: 최대 15분</div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         SECTION 1: 자기소개
-    ═══════════════════════════════════════════ -->
+    <!-- Section 1 divider -->
     <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
       <div class="sec-div">
         <div class="big-num">01</div>
@@ -433,9 +465,7 @@
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 4: 자기소개 내용
-    ─────────────────────────────────────────── -->
+    <!-- Slide 4: 자기소개 내용 -->
     <section>
       <div class="slide-title-bar">👤 자기소개</div>
       <div class="timeline">
@@ -443,29 +473,27 @@
           <div class="tl-dot"></div>
           <div class="tl-body">
             <span class="tl-label">학력</span><br>
-            출신 학교 / 전공 소개
+            <span id="c-school"></span>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-body">
             <span class="tl-label">현재</span><br>
-            현재 다니고 있는 회사 및 직무 소개
+            <span id="c-company"></span>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-dot gold"></div>
           <div class="tl-body">
             <span class="tl-label gold">한 줄 임팩트</span><br>
-            게임 클라이언트 프로그래머로 <strong>7년</strong> — 강렬한 한 줄로 소개
+            <span id="c-impact"></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 5: 주제 예고
-    ─────────────────────────────────────────── -->
+    <!-- Slide 5: 주제 예고 -->
     <section>
       <div class="slide-title-bar">📌 오늘 다룰 두 가지</div>
       <div class="two-col">
@@ -485,14 +513,10 @@
           </ul>
         </div>
       </div>
-      <div class="callout">
-        "게임 안 하는 분도 앞 파트는 전부 해당되는 내용입니다 :)"
-      </div>
+      <div class="callout">"게임 안 하는 분도 앞 파트는 전부 해당되는 내용입니다 :)"</div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         SECTION 2: 취업 이야기
-    ═══════════════════════════════════════════ -->
+    <!-- Section 2 divider -->
     <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
       <div class="sec-div">
         <div class="big-num">02</div>
@@ -501,28 +525,22 @@
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 7: 2-1 취업 시장
-    ─────────────────────────────────────────── -->
+    <!-- Slide 7: 2-1 취업 시장 -->
     <section>
       <div class="slide-title-bar">2-1. 지금 취업 시장은?</div>
       <div class="data-card">
-        <h4>📊 데이터 포인트 #1</h4>
-        <p>수치 / 기사 인용 — IT 취업 시장 현황 (공채 규모, 경쟁률 등)</p>
+        <h4 id="c-data1-title"></h4>
+        <p id="c-data1-desc"></p>
       </div>
       <div class="data-card">
-        <h4>📊 데이터 포인트 #2</h4>
-        <p>수치 / 기사 인용 — 채용 패턴 변화 또는 지원자 수 추이</p>
+        <h4 id="c-data2-title"></h4>
+        <p id="c-data2-desc"></p>
       </div>
-      <div class="callout">
-        팩트만 짧게 치고 빠지기 — 너무 길면 분위기가 가라앉음
-      </div>
-      <div class="pivot">→ "이런 상황이니까, 더 잘 준비해야 한다"</div>
+      <div class="callout">팩트만 짧게 치고 빠지기 — 너무 길면 분위기가 가라앉음</div>
+      <div class="pivot">→ "<span id="c-pivot"></span>"</div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 8: 2-2 면접 (양쪽 관점)
-    ─────────────────────────────────────────── -->
+    <!-- Slide 8: 2-2 면접 (양쪽 관점) -->
     <section>
       <div class="slide-title-bar">2-2. 면접, 양쪽에서 보다</div>
       <div class="order-badge">추천 순서: 전문가 포지션으로 시작 → 공감으로 연결</div>
@@ -546,48 +564,38 @@
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 9: 면접관이 기억하는 패턴
-    ─────────────────────────────────────────── -->
+    <!-- Slide 9: 면접관 패턴 -->
     <section>
       <div class="slide-title-bar">면접관이 기억하는 지원자 패턴</div>
       <div class="two-col">
         <div class="col-box green">
           <h4>✅ 좋았던 케이스</h4>
-          <ul class="slide-ul">
-            <li>긍정 사례 #1</li>
-            <li>긍정 사례 #2</li>
-          </ul>
+          <ul class="slide-ul" id="c-good-cases"></ul>
         </div>
         <div class="col-box red">
           <h4>❌ 아쉬웠던 케이스</h4>
-          <ul class="slide-ul">
-            <li>부정 사례 #1</li>
-            <li>부정 사례 #2</li>
-          </ul>
+          <ul class="slide-ul" id="c-bad-cases"></ul>
         </div>
       </div>
       <div class="mistake-box">
         <div class="label">⚠️ 공통 실수</div>
         <ul class="slide-ul">
-          <li>지원자들이 공통적으로 많이 하던 실수 패턴</li>
+          <li id="c-mistake"></li>
         </ul>
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 10: 2-3 실전 팁
-    ─────────────────────────────────────────── -->
+    <!-- Slide 10: 2-3 실전 팁 -->
     <section>
       <div class="slide-title-bar">2-3. 취업 준비 &amp; 면접 실전 팁</div>
       <div class="card-grid">
         <div class="card">
           <h4>📄 포트폴리오 / 이력서</h4>
-          <p>실제로 눈에 들어오는 것 vs<br>안 들어오는 것</p>
+          <p>실제로 눈에 들어오는 것 vs 안 들어오는 것</p>
         </div>
         <div class="card">
           <h4>💬 면접 질문 유형</h4>
-          <p>자주 나오는 질문 유형 &amp;<br>좋은 답변 구조</p>
+          <p>자주 나오는 질문 유형 &amp; 좋은 답변 구조</p>
         </div>
         <div class="card">
           <h4>💻 기술 면접</h4>
@@ -595,71 +603,61 @@
         </div>
         <div class="card">
           <h4>🤝 태도 &amp; 커뮤니케이션</h4>
-          <p>합격에 미치는 영향<br>(면접관 관점)</p>
+          <p>합격에 미치는 영향 (면접관 관점)</p>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         SECTION 3: 게임 업계 이야기
-    ═══════════════════════════════════════════ -->
+    <!-- Section 3 divider -->
     <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
       <div class="sec-div">
         <div class="big-num">03</div>
         <h2>게임 업계 이야기</h2>
         <div class="sec-time">약 2~3분</div>
-        <div class="bridge">
-          "여기서부터는 게임 업계에 관심 있는 분들을 위한 파트입니다"
+        <div class="bridge">"여기서부터는 게임 업계에 관심 있는 분들을 위한 파트입니다"</div>
+      </div>
+    </section>
+
+    <!-- Slide 12: 3-1 게임 업계 동향 -->
+    <section>
+      <div class="slide-title-bar">3-1. 게임 업계 취업 동향</div>
+      <ul class="slide-ul" style="margin-top: 0.3rem;">
+        <li>게임 클라이언트 직군에서 요즘 보는 스킬셋
+          <ul class="slide-ul">
+            <li class="note-li">Unity / Unreal Engine — 엔진 선호도 &amp; 요구 수준</li>
+          </ul>
+        </li>
+        <li>신입에게 실제로 기대하는 것 vs 오해하는 것</li>
+      </ul>
+      <div class="two-col" style="margin-top: 0.7rem;">
+        <div class="col-box green">
+          <h4>실제 기대하는 것</h4>
+          <ul class="slide-ul" id="c-expectations"></ul>
+        </div>
+        <div class="col-box red">
+          <h4>흔히 오해하는 것</h4>
+          <ul class="slide-ul" id="c-misconceptions"></ul>
         </div>
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 12: 3-1 게임 업계 취업 동향
-    ─────────────────────────────────────────── -->
-    <section>
-      <div class="slide-title-bar">3-1. 게임 업계 취업 동향</div>
-      <ul class="slide-ul" style="margin-top: 0.3rem;">
-        <li>
-          게임 클라이언트 직군에서 요즘 보는 스킬셋
-          <ul class="slide-ul" style="margin-top: 0;">
-            <li class="note-li">Unity / Unreal Engine — 엔진 선호도 & 요구 수준</li>
-          </ul>
-        </li>
-        <li>신입에게 실제로 기대하는 것 vs 오해하는 것</li>
-        <li>게임 업계 커리어 패스 간략 소개</li>
-      </ul>
-    </section>
-
-    <!-- ───────────────────────────────────────────
-         Slide 13: 3-2 현장 이야기
-    ─────────────────────────────────────────── -->
+    <!-- Slide 13: 3-2 현장 이야기 -->
     <section>
       <div class="slide-title-bar">3-2. 현장 이야기</div>
       <div class="two-col">
         <div class="col-box green">
           <h4>😄 재미있는 점</h4>
-          <ul class="slide-ul">
-            <li>현업의 즐거운 순간들</li>
-            <li>이 직업의 매력</li>
-          </ul>
+          <ul class="slide-ul" id="c-fun-parts"></ul>
         </div>
         <div class="col-box red">
           <h4>😓 힘든 점</h4>
-          <ul class="slide-ul">
-            <li>솔직하게 — 현실적인 이야기</li>
-            <li>그럼에도 계속하는 이유</li>
-          </ul>
+          <ul class="slide-ul" id="c-hard-parts"></ul>
         </div>
       </div>
-      <div class="warn-box">
-        공개된 정보 범위 내에서만 — 특정 회사 내부 비화는 주의
-      </div>
+      <div class="warn-box">공개된 정보 범위 내에서만 — 특정 회사 내부 비화는 주의</div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         SECTION 4: 마무리
-    ═══════════════════════════════════════════ -->
+    <!-- Section 4 divider -->
     <section data-background-gradient="linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%)">
       <div class="sec-div">
         <div class="big-num">04</div>
@@ -668,17 +666,11 @@
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────
-         Slide 15: 마무리 & Q&A
-    ─────────────────────────────────────────── -->
+    <!-- Slide 15: 마무리 & Q&A -->
     <section>
       <div class="slide-title-bar">🏁 마무리</div>
-      <div class="key-msg">
-        "핵심 메시지를 1~2줄로 압축 정리"
-      </div>
-      <div style="font-size: 0.72rem; color: #cbd5e1; text-align: left; margin-bottom: 0.8rem;">
-        후배들에게 남기고 싶은 한 마디
-      </div>
+      <div class="key-msg" id="c-key-message"></div>
+      <div style="font-size: 0.72rem; color: #cbd5e1; text-align: left; margin-bottom: 0.8rem;" id="c-last-word"></div>
       <div class="qa-row">
         <div class="qa-box">
           <div class="big">Q&amp;A</div>
@@ -686,18 +678,46 @@
         </div>
         <div class="qa-box" style="text-align: left; padding: 0.8rem 1rem;">
           <div style="font-size: 0.65rem; font-weight: 700; color: #60a5fa; margin-bottom: 0.4rem;">📬 연락처</div>
-          <div style="font-size: 0.62rem; color: #94a3b8; line-height: 1.7;">
-            개인적으로 연락할 수 있는 채널<br>(선택 공개)
-          </div>
+          <div style="font-size: 0.62rem; color: #94a3b8; line-height: 1.7;" id="c-contact"></div>
         </div>
       </div>
     </section>
 
-  </div><!-- .slides -->
-</div><!-- .reveal -->
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
 <script>
+  // CONTENT 값을 슬라이드에 채워 넣는 코드 (수정 불필요)
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+  function setList(id, items) {
+    const ul = document.getElementById(id);
+    if (!ul) return;
+    ul.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+  }
+
+  setText('c-school',       CONTENT.school);
+  setText('c-company',      CONTENT.company);
+  setText('c-impact',       CONTENT.impact);
+  setText('c-data1-title',  CONTENT.data1_title);
+  setText('c-data1-desc',   CONTENT.data1_desc);
+  setText('c-data2-title',  CONTENT.data2_title);
+  setText('c-data2-desc',   CONTENT.data2_desc);
+  setText('c-pivot',        CONTENT.pivot_msg);
+  setList('c-good-cases',   CONTENT.good_cases);
+  setList('c-bad-cases',    CONTENT.bad_cases);
+  setText('c-mistake',      CONTENT.common_mistake);
+  setList('c-expectations', CONTENT.expectations);
+  setList('c-misconceptions', CONTENT.misconceptions);
+  setList('c-fun-parts',    CONTENT.fun_parts);
+  setList('c-hard-parts',   CONTENT.hard_parts);
+  setText('c-key-message',  CONTENT.key_message);
+  setText('c-last-word',    CONTENT.last_word);
+  setText('c-contact',      CONTENT.contact);
+
   Reveal.initialize({
     hash: true,
     controls: true,
@@ -705,7 +725,6 @@
     slideNumber: 'c/t',
     center: true,
     transition: 'slide',
-    transitionSpeed: 'default',
     backgroundTransition: 'fade',
     width: 960,
     height: 700,
